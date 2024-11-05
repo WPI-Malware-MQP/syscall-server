@@ -1,0 +1,21 @@
+[package]
+name = "syscall-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde_bare = {git="https://git.sr.ht/~tdeo/serde_bare"}
+tracing = "0.1"
+
+[dependencies.serde]
+version = "1"
+features = ["derive"]
+
+[dependencies.tokio]
+version = "1"
+features = [
+    "net",
+    "macros",
+    "fs",
+    "tracing",
+]
